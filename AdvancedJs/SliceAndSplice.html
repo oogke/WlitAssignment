@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>splice and slice</title>
     
 </head>
 <body>
-    <!-- splice and slice -->
-
 
 
 <script>
     const colorsSplice=['red','blue','green','yellow'];
-    const updatedColorSplice=colorsSplice.splice(0,2);
- colorsSplice[0]="purple";
+    const updatedColorSplice=colorsSplice.splice(2,1,"purple");
 console.log("Colors after Splice and replacing green with purple = "+ colorsSplice);
 
 const colorsSlice=['red','blue','green','yellow'];
