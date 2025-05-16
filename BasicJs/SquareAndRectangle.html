@@ -44,17 +44,19 @@
        const RectangleAreaSpan= document.querySelector("#RectangleAreaSpan");
        const square={
         length: 10,
-        area(){
-return this.length*this.length;
-        }
+        breadth: 10,
+       area:area
        }
 const rectangle={
         length: 10,
         breadth:40,
-        area(){
-return this.length*this.breadth;
-        }
+       area:area
        }
+       function area()
+       {
+        return this.length*this.breadth;
+       }
+
 SquareAreaSpan.innerHTML=square.area();
 RectangleAreaSpan.innerHTML=rectangle.area();
 
