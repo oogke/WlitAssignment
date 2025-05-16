@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+
+    <title>Input-Output</title>
+    <style>
+               *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Baloo 2', cursive;
+        }
+        .container{
+              width: fit-content;
+              height: auto;
+              padding: 20px;
+           background-color: rgb(179, 223, 179);
+            border-radius: 10px;
+            margin: 20px auto ;
+            display: flex;
+            flex-direction: column;
+           justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+
+        } 
+        .container #form
+        {
+            width: 100%;
+            height: 100%;
+              display: flex;
+            flex-direction: column;
+           justify-content: center;
+            align-items: center;
+        }
+          .heading
+          {
+           text-align: center;
+           font-size: 30px;
+           font-weight: bolder;
+           margin-top: 70px;
+          }
+        .container input{
+            width: 200px;
+            height: 30px;
+            padding: 5px;
+            margin-top: 10px;
+
+        }
+        #SubmitBtn
+        {
+            width: 100px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+             box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+             border: 1px solid gray;
+             margin-top: 5px;
+
+        }
+        #output
+        {
+      
+         max-width: 500px;
+         width: auto;
+          height: 200px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1 class="heading">Input</h1>
+      <div class="container">
+     <form action="" id="form">
+       <span><b>Text Color:</b><input type="text" id="color" max="100" min="20" placeholder="Enter color" required></span>
+<span><b>Background Color:</b><input type="text" id="Bcolor" max="100" min="20" placeholder="Enter background-color" required></span>
+<span><b>Text:</b><input type="text" id="text" max="100" min="20" placeholder="Enter text" required></span>
+<button type="submit" id="SubmitBtn">Okay</button> 
+     </form>
+
+
+    </div>
+<h1 class="heading">Output</h1>
+<div id="output">
+    
+</div>
+<script> 
+const SubmitBtn= document.querySelector("#SubmitBtn");
+const form= document.querySelector("#form");
+        form.addEventListener("submit",(e)=>
+    {
+        e.preventDefault();
+        const color= document.querySelector("#color").value;
+        const backgroundColor= document.querySelector("#Bcolor").value;
+        const text= document.querySelector("#text").value;
+        const outputDiv= document.querySelector("#output");
+     
+        outputDiv.style.color=color;
+        outputDiv.style.backgroundColor=backgroundColor;
+outputDiv.innerHTML=text;
+
+form.reset();
+
+    })
+
+</script>
+</body>
+</html>
